@@ -1,0 +1,20 @@
+<template name="sortable">
+    <div class="sortContainer {{#if sortKeys}}sortIndent{{/if}}">
+        <ul class="sortkeys">
+            {{#if sortKeys}}
+                {{#each sortKeys}}
+                    <li>{{.}}</li>
+                {{/each}}
+            {{/if}}
+        </ul>
+        <ul class="sortable">
+            {{#if list}}
+                {{#each list}}
+                <li data-id="{{ getValue .. }}">{{ getLabel .. }}</li>
+                {{/each}}
+            {{else}}
+                <li class="dontsort">Nothing to sort.</li>
+            {{/if}}
+        </ul>
+    </div>
+</template>

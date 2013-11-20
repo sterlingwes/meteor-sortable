@@ -34,8 +34,8 @@ Template.sortable.rendered = function() {
                     return $(child).data('id');
                 });
             
-            if(this.data && this.data.session)
-                Session.set(this.data.session, ids);
+            if(that.data && that.data.session)
+                Session.set(that.data.session, ids);
         }
     });
 };
